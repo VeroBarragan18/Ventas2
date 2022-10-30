@@ -1,0 +1,286 @@
+/*///////////////////////////////Básicos///////////////////////////////////7*/
+html{
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+
+*, *::before, *::after
+{
+    box-sizing: inherit;
+}
+
+body
+{
+    background-color:#F3FBFB;
+    font-size: 16px;
+    font-family: 'Roboto', sans-serif;
+    position: absolute;
+}
+/*////////////////////////////////////////////////Cuerpo/////////////////////////////7*/
+.titulos{
+    color:#000000;
+    font-size:30px;
+    font-weight: lighter;
+    text-align: justify;
+    padding:50px;
+}
+/*Contenedores*/
+.novedades-productos{
+    display:flex;
+}
+/*productos*/
+.imagen-producto{
+    border:none;
+    background-color: #FFFFFF;
+    width:350px;
+    margin-left: 25px;
+    margin-right:25px;
+}
+.imagen{
+    width:300px;
+    height:400px;
+    align-items: center;
+    margin-left: 25px;
+    margin-right:10px;
+    margin-top:25px;
+
+}
+.nombre-producto{
+    color:#2D2427;
+    font-size: 22px;
+    font-weight:bold;
+    text-align: justify;
+}
+.descripcion-producto{
+    color:#2D2427;
+    font-size: 20px;
+    font-weight:lighter;
+    text-align: justify;
+}
+.boton-chico{
+    width:180px;
+    height:45px;
+    background-color:#2d2427;
+    color:#FFFFFF;
+    font-size:22px;
+    font-weight:lighter ;
+    padding:8px;
+    text-align: center;;
+    margin-left: 70px;
+    cursor:pointer;
+}
+/*Botón grande*/
+.boton-grande{
+    width:1070px;
+    height:50px;
+    background-color:#2D2427;
+    color:#FFFFFF;
+    font-weight: lighter;
+    font-size: 24px;
+    text-align: center;
+    padding:8px;
+    margin-left:80px;
+    margin-top:100px;
+    margin-bottom:50px;
+    cursor:pointer;
+}
+/*/////////////////////////////////////////////////////Encabezado/////////////////////*/
+.contenedor-encabezado{
+    display:flex;
+    background-color: #000000;
+    z-index: 2;
+}
+/*logotipo*/
+.imagen-logo{
+    cursor:pointer;
+}
+.imagen-encabezado{
+    width:100px;
+    height:100px;
+    margin-left:70px;
+}
+/*Botones navegador*/
+.contenedor-navegador{
+    margin-right: 300px;
+    display:flex;
+    margin-bottom:30px;
+    margin-left:40px;
+}
+.boton-novedades{
+    background-color:#2D2427;
+    color:#E5DCC8;
+    text-align: center;
+    font-size: 20px;
+    font-weight:lighter;
+    padding:8px;
+    width:150px;
+    height:50px;
+    margin-top: 30px;
+    cursor:pointer;
+}
+.boton-tienda{
+    background-color:#2D2427;
+    color:#E5DCC8;
+    text-align: center;
+    font-size: 20px;
+    font-weight:lighter;
+    padding:8px;
+    margin-left:10px;
+    cursor:pointer;
+    width:150px;
+    height:50px;
+    margin-top: 30px;
+}
+/*Botones Iconos*/
+.contenedor-iconos{
+    display:flex;
+    margin-left:100px;
+    cursor:pointer;
+    margin-top: 30px;
+
+}
+.boton-search{
+    background-color:#000000;
+    border-radius: 10px;
+    cursor:pointer;
+    border:2px solid #D0BD14;
+    width:60px;
+    height:60px;
+    align-items: center;
+    margin-left:20px;
+}
+.boton-perfil{
+    background-color:#000000;
+    border-radius: 10px;
+    cursor:pointer;
+    border:2px solid #D0BD14;
+    width:60px;
+    height:60px;
+    align-items: center;
+    margin-left:20px;
+}
+.boton-shop{
+    background-color:#000000;
+    border-radius: 10px;
+    cursor:pointer;
+    color:#E5DCC8;
+    font-size: 35px;
+    border:2px solid #D0BD14;
+    width:85px;
+    height:60px;
+    align-items: center;
+    margin-left:20px;
+}
+/*/////////////////////////////////////////Pie de página/////////////////////*/
+.contenedor-pie-pagina{
+    background-color:#2D2427;
+    align-items: justify;
+}
+/*///////////////////////////////Responsividad/////////////////////////////*/
+
+@media(max-width: 1148px)
+{
+    .novedades-productos{
+        display:block;
+        margin-left:18%;
+        margin-right:18%;
+    }
+    .imagen-producto{
+        border:none;
+        background-color: #FFFFFF;
+        width:350px;
+        margin-left: 25px;
+        margin-right:25px;
+        margin-top:20px;
+    }
+    .titulos{
+        color:#000000;
+        font-size:30px;
+        font-weight: lighter;
+        text-align: justify;
+    }
+    .boton-grande{
+        width:30%;
+        background-color:#2D2427;
+        color:#FFFFFF;
+        font-weight: lighter;
+        font-size: 24px;
+        text-align: center;
+        padding:8px;
+        margin-left:18%;
+        margin-top:18%;
+        margin-bottom:50px;
+        cursor:pointer;
+    }
+}
+/*/////////////////////////////////////////Menú hamburguesa///////////////////////////////////*/
+nav{
+    display:flex;
+    align-items:center;
+    width:100%;
+    
+    margin-right: 80px;;
+    background-color:#000000;
+    border-bottom:1px solid #000000;
+    
+    
+    }
+    nav span i{
+    color:#FFFFFF;
+    font-size:2.7rem;
+    cursor: pointer;
+    }
+    aside{
+        background-color: #000000;
+        width:260px;
+        position:absolute;z-index: 2;
+        top:0;
+        left:0;
+        bottom:0;
+        overflow-y:hidden;
+        margin-top:102px;
+        transition:0.5s;
+    }
+    aside:hover{
+        overflow-y:auto;
+    }
+    .desplegar{
+        transform:translateX(-100%);
+    }
+    aside::-webkit-scrollbar{
+        width:8px;
+    }
+    aside::-webkit-scrollbar-thumb{
+    background-color:#000000;
+    border-radius:5px;
+    }
+    .container-svg{
+        border-bottom:1px solid #000000;
+        padding:10px 1px;
+        color:white;
+    }
+    .container-svg div{
+        display:flex;
+        align-items:center;
+        width:100%;
+        padding:10px 20px;
+        cursor:pointer;
+    }
+    .container-svg div:hover{
+        background-color:#2d2427;
+        color:#E5DCC8;
+        
+    }
+    .container-svg div span{
+        margin-left:15px;
+        font-size: 1.5rem;
+        font-weight:500;
+    }
+    .aside{
+        width:500px;
+        height:500px;
+    }
+
+
+
+
